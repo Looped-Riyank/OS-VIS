@@ -320,8 +320,10 @@
   }
 
   #chartContainer {
-    height: 200px;
-    width: 250px;
+    position: relative;
+    right: 30px;
+    width: 310px;
+    height: 300px;
   }
 
   /* #chartContainer2 {

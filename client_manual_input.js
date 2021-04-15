@@ -289,7 +289,7 @@ function sstf_click() {
     }]
   });
   chart.render();
-  document.querySelector("#betweenButton").innerHTML = '<br> <div style="text-align: center">  <button type="button" id="compareBtn">COMPARE</button> </div>'+ '<div id="myModal" class="modal"><div class="modal-content"><span class="close">&times;</span><div id="chartContainer2"></div><div id="title"></div><div id="answers"></div></div></div></div>' ;
+  document.querySelector("#betweenButton").innerHTML = '<br> <div style="text-align: center">  <button type="button" class="btn btn-outline-primary" id="compareBtn">COMPARE</button> </div>'+ '<div id="myModal" class="modal"><div class="modal-content"><span class="close">&times;</span><div id="chartContainer2"></div><div id="title"></div><div id="answers"></div></div></div></div>' ;
 
   let modal = document.getElementById("myModal");
 
@@ -451,7 +451,7 @@ function scan_click() {
     }]
   });
   chart.render();
-  document.querySelector("#betweenButton").innerHTML = '<br> <div style="text-align: center">  <button type="button" id="compareBtn">COMPARE</button> </div>'+ '<div id="myModal" class="modal"><div class="modal-content"><span class="close">&times;</span><div id="chartContainer2"></div><div id="title"></div><div id="answers"></div></div></div></div>' ;
+  document.querySelector("#betweenButton").innerHTML = '<br> <div style="text-align: center">  <button type="button" class="btn btn-outline-primary" id="compareBtn">COMPARE</button> </div>'+ '<div id="myModal" class="modal"><div class="modal-content"><span class="close">&times;</span><div id="chartContainer2"></div><div id="title"></div><div id="answers"></div></div></div></div>' ;
 
   let modal = document.getElementById("myModal");
 
@@ -623,7 +623,7 @@ function cscan_click() {
     }]
   });
   chart.render();
-  document.querySelector("#betweenButton").innerHTML = '<br> <div style="text-align: center">  <button type="button" id="compareBtn">COMPARE</button> </div>'+ '<div id="myModal" class="modal"><div class="modal-content"><span class="close">&times;</span><div id="chartContainer2"></div><div id="title"></div><div id="answers"></div></div></div></div>' ;
+  document.querySelector("#betweenButton").innerHTML = '<br> <div style="text-align: center">  <button type="button"  class="btn btn-outline-primary"id="compareBtn">COMPARE</button> </div>'+ '<div id="myModal" class="modal"><div class="modal-content"><span class="close">&times;</span><div id="chartContainer2"></div><div id="title"></div><div id="answers"></div></div></div></div>' ;
 
   let modal = document.getElementById("myModal");
 
@@ -785,7 +785,7 @@ function look_click() {
     }]
   });
   chart.render();
-  document.querySelector("#betweenButton").innerHTML = '<br> <div style="text-align: center">  <button type="button" id="compareBtn">COMPARE</button> </div>'+ '<div id="myModal" class="modal"><div class="modal-content"><span class="close">&times;</span><div id="chartContainer2"></div><div id="title"></div><div id="answers"></div></div></div></div>' ;
+  document.querySelector("#betweenButton").innerHTML = '<br> <div style="text-align: center">  <button type="button" class="btn btn-outline-primary" id="compareBtn">COMPARE</button> </div>'+ '<div id="myModal" class="modal"><div class="modal-content"><span class="close">&times;</span><div id="chartContainer2"></div><div id="title"></div><div id="answers"></div></div></div></div>' ;
 
   let modal = document.getElementById("myModal");
 
@@ -952,7 +952,7 @@ function clook_click() {
     }]
   });
   chart.render();
-  document.querySelector("#betweenButton").innerHTML = '<br> <div style="text-align: center">  <button type="button" id="compareBtn">COMPARE</button> </div>'+ '<div id="myModal" class="modal"><div class="modal-content"><span class="close">&times;</span><div id="chartContainer2"></div><div id="title"></div><div id="answers"></div></div></div></div>' ;
+  document.querySelector("#betweenButton").innerHTML = '<br> <div style="text-align: center">  <button type="button"  class="btn btn-outline-primary" id="compareBtn">COMPARE</button> </div>'+ '<div id="myModal" class="modal"><div class="modal-content"><span class="close">&times;</span><div id="chartContainer2"></div><div id="title"></div><div id="answers"></div></div></div></div>' ;
 
   let modal = document.getElementById("myModal");
 
@@ -1097,7 +1097,7 @@ function lifo_click() {
     }]
   });
   chart.render();
-  document.querySelector("#betweenButton").innerHTML = '<br> <div style="text-align: center">  <button type="button" id="compareBtn">COMPARE</button> </div>'+ '<div id="myModal" class="modal"><div class="modal-content"><span class="close">&times;</span><div id="chartContainer2"></div><div id="title"></div><div id="answers"></div></div></div></div>' ;
+  document.querySelector("#betweenButton").innerHTML = '<br> <div style="text-align: center">  <button type="button"  class="btn btn-outline-primary"id="compareBtn">COMPARE</button> </div>'+ '<div id="myModal" class="modal"><div class="modal-content"><span class="close">&times;</span><div id="chartContainer2"></div><div id="title"></div><div id="answers"></div></div></div></div>' ;
 
   let modal = document.getElementById("myModal");
 
