@@ -285,6 +285,25 @@ p {
   line-height: 1.9;
 }
 
+.form-container-res {
+  width: 500px;
+  clear: both;
+}
+
+.form-container-res input {
+  width: 500px;
+  clear: both;
+}
+
+.center-run {
+  text-align: center;
+}
+
+#chartContainer {
+  height: 400px;
+  width: 500px;
+}
+
 @media (min-width: 1200px) {
   .container {
     max-width: 1310px;
@@ -342,6 +361,8 @@ p {
   .tm-video-text-overlay {
     left: 25%;
   }
+
+
 }
 
 @media (max-width: 584px) {

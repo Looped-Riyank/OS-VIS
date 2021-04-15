@@ -19,7 +19,7 @@
     <!-- https://getbootstrap.com/ -->
     <link rel="stylesheet" href="css/templatemo-style.css" />
     <link rel="stylesheet" href="styling.css" />
-    <style>
+    <!-- <style>
       .form-container {
         width: 500px!important;
         clear: both!important;
@@ -29,7 +29,7 @@
         width: 100%!important;
         clear: both!important;
       }
-    </style>
+    </style> -->
     <!-- Templatemo style -->
   </head>
 
@@ -63,7 +63,7 @@
       <div class="row">
         <div class="col-lg-12">
           <header class="text-center tm-site-header">
-            <h1 class="pl-4 tm-site-title">COMPARISON OF ALGORITHMS</h1>
+            <h1 class=" tm-site-title">COMPARISON OF ALGORITHMS</h1>
           </header>
         </div>
       </div>
@@ -225,14 +225,14 @@
                   <h3 class="tm-text-yellow tm-font-400">
                     Implementation of the algorithm:
                   </h3>
-                  <div class="form-container">
+                  <div class="form-container-res">
                     <label>Enter the request sequence:</label>
                     <input id="Sequence" oninput="resetComparisonResult()" placeholder="Eg: 50, 55, 80 (0 <= x <= 9999)"/>
                     <p></p>
                     <label>Enter the initial head position:</label>
                     <input id="Head" oninput="resetComparisonResult()" placeholder="Eg: 63 (0 <= x <= 9999)"/>
                     <p></p>
-                    <div style="text-align: center">
+                    <div class="center-run">
                       <button class="crimson-click" onclick="comparison_click()" id="COMPARISON">COMPARE</button>
                     </div>
                   </div>
@@ -262,7 +262,7 @@
                   
                   <div class="comparison-output">
                     <span style="display: none; font-weight: 500" id="comaprisonAnswers"></span>
-                    <div id="chartContainer" style="display: none; height: 400px; width: 500px;"></div>
+                    <div id="chartContainer" style="display: none"></div>
                   </div>
                 </div>
               </div>

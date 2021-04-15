@@ -188,3 +188,37 @@ footer {
   min-width: 100%;
   min-height: 100%;
 }
+
+@media only screen and (max-width: 768px) {
+
+  html body {
+    width: 100%;
+  }
+
+  #scene {
+    width: 100%;
+  }
+
+  .depth3 img {
+
+    display: none;
+  }
+
+  .module-box {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .mp4-ani {
+    width: 100%;
+  }
+
+
+
+}
+
+
+

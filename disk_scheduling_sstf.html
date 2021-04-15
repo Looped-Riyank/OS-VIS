@@ -49,7 +49,7 @@
   <link rel="stylesheet" href="styling.css" />
 
 
-  <style>
+  <!-- <style>
     .form-container {
       width: 500px!important;
       clear: both!important;
@@ -59,7 +59,7 @@
       width: 100%!important;
       clear: both!important;
     }
-  </style>
+  </style> -->
   <!-- Templatemo style -->
 </head>
 
@@ -87,7 +87,7 @@
     <div class="row">
       <div class="col-lg-12">
         <header class="text-center tm-site-header">
-          <h1 class="pl-4 tm-site-title">SHORTEST SEEK TIME FIRST ALGORITHM</h1>
+          <h1 class=" tm-site-title">SHORTEST SEEK TIME FIRST ALGORITHM</h1>
         </header>
       </div>
     </div>
@@ -186,21 +186,21 @@
 					  <input type="radio" onclick="javascript:manualOrFileInputCheck();" name="manualFile" id="manualCheck" /><label style="color: #f9443e"><b>&nbsp;&nbsp;Manually Enter The Inputs&nbsp;&nbsp;&nbsp;</b></label>
 					  <input type="radio" onclick="javascript:manualOrFileInputCheck();" name="manualFile" id="fileCheck" /><label style="color: #f9443e"><b>&nbsp;&nbsp;Upload File&nbsp;&nbsp;&nbsp;</b></label>
 					  <p></p>
-                    <div class="form-container" id="ifManualInput" style="display:none">
+                    <div class="form-container-res" id="ifManualInput" style="display:none">
                       <label>Enter the request sequence:</label>
                       <input id="Sequence" oninput="resetSstfResult()" placeholder="Eg: 50, 55, 80 (0 <= x <= 9999)"/>
                       <p></p>
                       <label>Enter the initial head position:</label>
                       <input id="Head" oninput="resetSstfResult()" placeholder="Eg: 63 (0 <= x <= 9999)"/>
                       <p></p>
-                      <div style="text-align: center">
+                      <div class="center-run">
                         <button class="crimson-click" onclick="sstf_click()" id="SSTF">Run SSTF</button>
                       </div>
                     </div>
 					<div class="form-container" id="ifFileInput" style="display:none; text-align: center">
                         <label>Format of input</label>
                         <br>
-                        <img src="images/file_example.png">
+                        <img src="images/file_example.png" class="resp-img">
                         <br>
                         <br>
 						<input type="file" style="text-align: center" onclick="resetFileInputSstf()" id="file-selector" accept=".txt" multiple>
@@ -240,7 +240,7 @@
                     <label>Average seek time of the algorithm is:&nbsp;</label><span style="font-weight: bolder; color: #5789ff" id="sstf_averageSeekCount"></span>
                     <p></p>
                     <p></p>
-                    <div id="chartContainer" style="display: none; height: 400px; width: 500px;"></div>
+                    <div id="chartContainer" style="display: none"></div>
                     <div id="betweenButton">
 
 

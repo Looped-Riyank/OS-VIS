@@ -6,7 +6,7 @@
   top: 0;
   z-index: 999;
   background-color: black;
-  
+
 }
 
 .nav-item {
@@ -17,7 +17,7 @@
 
 .nav-center {
   position: relative;
-  
+
   margin: 0 auto;
   color: white;
   text-decoration: none;
@@ -57,21 +57,21 @@
 /*  cursor: pointer;*/
 /*}*/
 
-.crimson-click:hover {
+/* .crimson-click:hover {
   color: crimson;
   cursor: pointer;
-}
+} */
 
 
 .disc-dropbtn {
-  
+
   background-color: black;
   color: white;
   padding: 16px 16px 16px 60px;
   font-size: 16px;
   border: none;
-  
-  
+
+
 }
 
 .disc-dropdown {
@@ -79,7 +79,7 @@
   display: inline-block;
   right: 60px;
   top: 8px;
-  
+
 }
 
 .disc-dropdown-content {
@@ -170,7 +170,7 @@
   border: 1px solid #888;
   height: auto;
   width: 700px;
-  //align-items: center;
+  /* //align-items: center; */
   display: flow-root;
 }
 
@@ -231,7 +231,7 @@
 }
 
 .swiper-container {
-  //background-color: rgb(241, 231, 88);
+  /* //background-color: rgb(241, 231, 88); */
   width: auto;
   height: auto;
 }
@@ -256,7 +256,7 @@
   font-weight: bold;
   font-family: Consolas;
   font-size: larger;
-  //text-align: left;
+  /* //text-align: left; */
   padding-left: 40px;
   padding-right: 40px;
 
@@ -279,3 +279,82 @@
 /*  text-align: center;*/
 /*  color: ;*/
 /*}*/
+
+@media only screen and (max-width: 768px) {
+
+  .disc-dropbtn {
+
+    display: none;
+
+  }
+
+  .nav-center {
+
+    left: 0px;
+  }
+
+  .tm-timeline-description {
+    padding: 40px;
+
+    width: 325.200px;
+  
+  }
+
+  .form-container-res {
+    width: 300px;
+    
+  }
+  
+  .form-container-res input {
+    width: 250px;
+    
+  }
+
+  .center-run {
+    text-align: left;
+  } 
+
+  .resp-img {
+    width: 250px;
+    height: 200px;
+  }
+
+  #chartContainer {
+    height: 200px;
+    width: 250px;
+  }
+
+  /* #chartContainer2 {
+    height: 200px;
+    width: 250px;
+  } */
+
+  .modal-content {
+    margin: 50% auto;
+   
+  }
+
+
+   ol {
+
+    padding: 20px;
+
+   }
+
+   ul {
+     padding-left: 20px;
+   }
+
+   li {
+     padding-top: 3px;
+     padding-bottom: 3px;
+   }
+
+ 
+
+
+  
+
+
+
+}
