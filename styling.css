@@ -311,8 +311,10 @@
   }
 
   .center-run {
-    text-align: left;
+    position: relative;
+    right: 30px;
   } 
+
 
   .resp-img {
     width: 250px;
@@ -321,7 +323,7 @@
 
   #chartContainer {
     position: relative;
-    right: 30px;
+    right: 32px;
     width: 310px;
     height: 300px;
   }
