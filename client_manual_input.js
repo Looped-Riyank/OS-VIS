@@ -43,39 +43,39 @@ function fcfs_click() {
   let requestSequenceFcfs = document.getElementById("Sequence").value;
   let headFcfs = document.getElementById("Head").value;
   requestSequenceFcfs = requestSequenceFcfs
-    .split(/ |,/)
-    .filter(function (character) {
-      return character !== "";
-    });
+      .split(/ |,/)
+      .filter(function (character) {
+        return character !== "";
+      });
   if (requestSequenceFcfs.length === 0) {
     alert(
-      "Got invalid input!!! Integral value(x) should be in the range 0<=x<=9999"
+        "Got invalid input!!! Integral value(x) should be in the range 0<=x<=9999"
     );
     return;
   }
 
   for (i = 0; i < requestSequenceFcfs.length; ++i) {
     if (
-      !Number.isInteger(+requestSequenceFcfs[i]) ||
-      !(+requestSequenceFcfs[i] >= 0)
+        !Number.isInteger(+requestSequenceFcfs[i]) ||
+        !(+requestSequenceFcfs[i] >= 0)
     ) {
       alert(
-        "Got invalid input!!! Integral value(x) should be in the range 0<=x<=9999"
+          "Got invalid input!!! Integral value(x) should be in the range 0<=x<=9999"
       );
       return;
     }
   }
   if (headFcfs.length === 0) {
     alert(
-      "Got invalid input!!! Integral value(x) should be in the range 0<=x<=9999"
+        "Got invalid input!!! Integral value(x) should be in the range 0<=x<=9999"
     );
     return;
   }
   if (
-    !Number.isInteger(+headFcfs) || Number.isInteger(+headFcfs) < 0
+      !Number.isInteger(+headFcfs) || Number.isInteger(+headFcfs) < 0
   ) {
     alert(
-      "Got invalid input!!! Integral value(x) should be in the range 0<=x<=9999"
+        "Got invalid input!!! Integral value(x) should be in the range 0<=x<=9999"
     );
     return;
   }
@@ -94,7 +94,7 @@ function fcfs_click() {
 
   const result = fcfs_man(requestSequenceFcfs, headFcfs);
   let ele = document.getElementById('fcfs_totalSeekCount');
-  ele.innerText = result[0];
+  ele.innerText = result[0] + ' ms';
   ele = document.getElementById('fcfs_finalOrder');
   ele.innerText = '';
   for(h = 0; h < result[1].length; ++h) {
@@ -108,7 +108,7 @@ function fcfs_click() {
     ele.innerText += result[1][h];
   }
   ele = document.getElementById('fcfs_averageSeekCount');
-  ele.innerText = result[0] / (result[1].length - 1);
+  ele.innerText = (result[0]/(result[1].length-1)).toFixed(2) + ' ms';
   ele = document.getElementById('chartContainer');
   ele.style.display = 'block';
 
@@ -136,7 +136,7 @@ function fcfs_click() {
     }]
   });
   chart.render();
-  document.querySelector("#betweenButton").innerHTML = '<br> <div style="text-align: center">  <button type="button" class="btn btn-outline-primary" id="compareBtn">COMPARE</button> </div>'+ '<div id="myModal" class="modal"><div class="modal-content"><span class="close">&times;</span><div id="chartContainer2"></div><div id="title"></div><div id="answers"></div></div></div></div>' ;
+  document.querySelector("#betweenButton").innerHTML = '<br> <div style="text-align: center">  <button type="button"  class="btn btn-outline-primary" id="compareBtn">COMPARE</button> </div>'+ '<div id="myModal" class="modal"><div class="modal-content"><span class="close">&times;</span><div id="chartContainer2"></div><div id="title"></div><div id="answers"></div></div></div></div>' ;
 
   let modal = document.getElementById("myModal");
 
@@ -247,7 +247,7 @@ function sstf_click() {
 
   const result = sstf_man(requestSequenceSstf, headSstf);
   let ele = document.getElementById('sstf_totalSeekCount');
-  ele.innerText = result[0];
+  ele.innerText = result[0] + ' ms';
   ele = document.getElementById('sstf_finalOrder');
   ele.innerText = '';
   for(h = 0; h < result[1].length; ++h) {
@@ -261,7 +261,7 @@ function sstf_click() {
     ele.innerText += result[1][h];
   }
   ele = document.getElementById('sstf_averageSeekCount');
-  ele.innerText = result[0] / (result[1].length - 1);
+  ele.innerText = (result[0]/(result[1].length-1)).toFixed(2) + ' ms';
   ele = document.getElementById('chartContainer');
   ele.style.display = 'block';
 
@@ -409,7 +409,7 @@ function scan_click() {
 
   const result = scan_man(requestSequenceScan, headScan);
   let ele = document.getElementById('scan_totalSeekCount');
-  ele.innerText = result[0];
+  ele.innerText = result[0] + ' ms';
   ele = document.getElementById('scan_finalOrder');
   ele.innerText = '';
   for(h = 0; h < result[1].length; ++h) {
@@ -423,7 +423,7 @@ function scan_click() {
     ele.innerText += result[1][h];
   }
   ele = document.getElementById('scan_averageSeekCount');
-  ele.innerText = result[0] / (result[1].length - 1);
+  ele.innerText = (result[0]/(result[1].length-1)).toFixed(2) + ' ms';
   ele = document.getElementById('chartContainer');
   ele.style.display = 'block';
 
@@ -451,7 +451,7 @@ function scan_click() {
     }]
   });
   chart.render();
-  document.querySelector("#betweenButton").innerHTML = '<br> <div style="text-align: center">  <button type="button" class="btn btn-outline-primary" id="compareBtn">COMPARE</button> </div>'+ '<div id="myModal" class="modal"><div class="modal-content"><span class="close">&times;</span><div id="chartContainer2"></div><div id="title"></div><div id="answers"></div></div></div></div>' ;
+  document.querySelector("#betweenButton").innerHTML = '<br> <div style="text-align: center">  <button type="button"  class="btn btn-outline-primary" id="compareBtn">COMPARE</button> </div>'+ '<div id="myModal" class="modal"><div class="modal-content"><span class="close">&times;</span><div id="chartContainer2"></div><div id="title"></div><div id="answers"></div></div></div></div>' ;
 
   let modal = document.getElementById("myModal");
 
@@ -581,7 +581,7 @@ function cscan_click() {
 
   const result = cscan_man(requestSequenceCscan, headCscan);
   let ele = document.getElementById('cscan_totalSeekCount');
-  ele.innerText = result[0];
+  ele.innerText = result[0] + ' ms';
   ele = document.getElementById('cscan_finalOrder');
   ele.innerText = '';
   for(h = 0; h < result[1].length; ++h) {
@@ -595,7 +595,7 @@ function cscan_click() {
     ele.innerText += result[1][h];
   }
   ele = document.getElementById('cscan_averageSeekCount');
-  ele.innerText = result[0] / (result[1].length - 1);
+  ele.innerText = (result[0]/(result[1].length-1)).toFixed(2) + ' ms';
   ele = document.getElementById('chartContainer');
   ele.style.display = 'block';
 
@@ -623,7 +623,7 @@ function cscan_click() {
     }]
   });
   chart.render();
-  document.querySelector("#betweenButton").innerHTML = '<br> <div style="text-align: center">  <button type="button"  class="btn btn-outline-primary"id="compareBtn">COMPARE</button> </div>'+ '<div id="myModal" class="modal"><div class="modal-content"><span class="close">&times;</span><div id="chartContainer2"></div><div id="title"></div><div id="answers"></div></div></div></div>' ;
+  document.querySelector("#betweenButton").innerHTML = '<br> <div style="text-align: center">  <button type="button"  class="btn btn-outline-primary" id="compareBtn">COMPARE</button> </div>'+ '<div id="myModal" class="modal"><div class="modal-content"><span class="close">&times;</span><div id="chartContainer2"></div><div id="title"></div><div id="answers"></div></div></div></div>' ;
 
   let modal = document.getElementById("myModal");
 
@@ -743,7 +743,7 @@ function look_click() {
 
   const result = look_man(requestSequenceLook, headLook);
   let ele = document.getElementById('look_totalSeekCount');
-  ele.innerText = result[0];
+  ele.innerText = result[0] + ' ms';
   ele = document.getElementById('look_finalOrder');
   ele.innerText = '';
   for(h = 0; h < result[1].length; ++h) {
@@ -757,7 +757,7 @@ function look_click() {
     ele.innerText += result[1][h];
   }
   ele = document.getElementById('look_averageSeekCount');
-  ele.innerText = result[0] / (result[1].length - 1);
+  ele.innerText = (result[0]/(result[1].length-1)).toFixed(2) + ' ms';
   ele = document.getElementById('chartContainer');
   ele.style.display = 'block';
 
@@ -785,7 +785,7 @@ function look_click() {
     }]
   });
   chart.render();
-  document.querySelector("#betweenButton").innerHTML = '<br> <div style="text-align: center">  <button type="button" class="btn btn-outline-primary" id="compareBtn">COMPARE</button> </div>'+ '<div id="myModal" class="modal"><div class="modal-content"><span class="close">&times;</span><div id="chartContainer2"></div><div id="title"></div><div id="answers"></div></div></div></div>' ;
+  document.querySelector("#betweenButton").innerHTML = '<br> <div style="text-align: center">  <button type="button"  class="btn btn-outline-primary" id="compareBtn">COMPARE</button> </div>'+ '<div id="myModal" class="modal"><div class="modal-content"><span class="close">&times;</span><div id="chartContainer2"></div><div id="title"></div><div id="answers"></div></div></div></div>' ;
 
   let modal = document.getElementById("myModal");
 
@@ -848,9 +848,9 @@ function resetClookResult() {
   ele = document.getElementById('chartContainer');
   ele.style.display = 'none';
 
-  
- ele = document.getElementById('compareBtn');
- ele.style.display = 'none';
+
+  ele = document.getElementById('compareBtn');
+  ele.style.display = 'none';
 
 }
 
@@ -910,7 +910,7 @@ function clook_click() {
 
   const result = clook_man(requestSequenceClook, headClook);
   let ele = document.getElementById('clook_totalSeekCount');
-  ele.innerText = result[0];
+  ele.innerText = result[0] + ' ms';
   ele = document.getElementById('clook_finalOrder');
   ele.innerText = '';
   for(h = 0; h < result[1].length; ++h) {
@@ -924,7 +924,7 @@ function clook_click() {
     ele.innerText += result[1][h];
   }
   ele = document.getElementById('clook_averageSeekCount');
-  ele.innerText = result[0] / (result[1].length - 1);
+  ele.innerText = (result[0]/(result[1].length-1)).toFixed(2) + ' ms';
   ele = document.getElementById('chartContainer');
   ele.style.display = 'block';
 
@@ -961,12 +961,12 @@ function clook_click() {
   let span = document.getElementsByClassName("close")[0];
 
   btn.onclick = function() {
-      modal.style.display = "block";
-      comparison_click_from_algo();
+    modal.style.display = "block";
+    comparison_click_from_algo();
   }
 
   span.onclick = function() {
-      modal.style.display = "none";
+    modal.style.display = "none";
   }
 
 }
@@ -1055,7 +1055,7 @@ function lifo_click() {
 
   const result = lifo_man(requestSequenceLifo, headLifo);
   let ele = document.getElementById('lifo_totalSeekCount');
-  ele.innerText = result[0];
+  ele.innerText = result[0] + ' ms';
   ele = document.getElementById('lifo_finalOrder');
   ele.innerText = '';
   for(h = 0; h < result[1].length; ++h) {
@@ -1069,7 +1069,7 @@ function lifo_click() {
     ele.innerText += result[1][h];
   }
   ele = document.getElementById('lifo_averageSeekCount');
-  ele.innerText = result[0] / (result[1].length - 1);
+  ele.innerText = (result[0]/(result[1].length-1)).toFixed(2) + ' ms';
   ele = document.getElementById('chartContainer');
   ele.style.display = 'block';
 
@@ -1097,7 +1097,7 @@ function lifo_click() {
     }]
   });
   chart.render();
-  document.querySelector("#betweenButton").innerHTML = '<br> <div style="text-align: center">  <button type="button"  class="btn btn-outline-primary"id="compareBtn">COMPARE</button> </div>'+ '<div id="myModal" class="modal"><div class="modal-content"><span class="close">&times;</span><div id="chartContainer2"></div><div id="title"></div><div id="answers"></div></div></div></div>' ;
+  document.querySelector("#betweenButton").innerHTML = '<br> <div style="text-align: center">  <button type="button"  class="btn btn-outline-primary" id="compareBtn">COMPARE</button> </div>'+ '<div id="myModal" class="modal"><div class="modal-content"><span class="close">&times;</span><div id="chartContainer2"></div><div id="title"></div><div id="answers"></div></div></div></div>' ;
 
   let modal = document.getElementById("myModal");
 
@@ -1216,15 +1216,15 @@ function comparison_click() {
     }
   }
 
-  let conclusion = "<br>Conclusion:-".fontcolor('#6FE261').fontsize(4) + "<br>Fastest Algorithm/s !!!" + "<br>" + "In this case:" + "<br><br>" + "Algorithm/s having least Total Seek Count is/are:<br>" + algorithmsHavingLeastTotalSeekCount.toString().fontcolor('#5789ff') + "<br><br>" + "Minimum Total Seek Count: " + minimumTotalSeekCount.toString().fontcolor('#5789ff') + "<br><br>";
-  let title = 'Total Seek Count:-<br>'.fontcolor('#6FE261').fontsize(4);
-  let ans = 'FCFS - ' + resultFcfs[0].toString().fontcolor('#5789ff') + '<br>';
-  ans += 'SSTF - ' + resultSstf[0].toString().fontcolor('#5789ff') + '<br>';
-  ans += 'SCAN - ' + resultScan[0].toString().fontcolor('#5789ff') + '<br>';
-  ans += 'CSCAN - ' + resultCscan[0].toString().fontcolor('#5789ff') + '<br>';
-  ans += 'LOOK - ' + resultLook[0].toString().fontcolor('#5789ff') + '<br>';
-  ans += 'CLOOK - ' + resultClook[0].toString().fontcolor('#5789ff') + '<br>';
-  ans += 'LIFO - ' + resultLifo[0].toString().fontcolor('#5789ff') + '<br>';
+  let conclusion = "<br>Conclusion:-".fontcolor('#6FE261').fontsize(4) + "<br>Fastest Algorithm/s !!!" + "<br>" + "In this case:" + "<br><br>" + "Algorithm/s having least Total Seek Time is/are:<br>" + algorithmsHavingLeastTotalSeekCount.toString().fontcolor('#5789ff') + "<br><br>" + "Minimum Total Seek Time: " + minimumTotalSeekCount.toString().fontcolor('#5789ff') + " ms".fontcolor('#5789ff') + "<br><br>";
+  let title = 'Total Seek Time:-<br>'.fontcolor('#6FE261').fontsize(4);
+  let ans = 'FCFS - ' + resultFcfs[0].toString().fontcolor('#5789ff') + ' ms'.fontcolor('#5789ff') + '<br>';
+  ans += 'SSTF - ' + resultSstf[0].toString().fontcolor('#5789ff') + ' ms'.fontcolor('#5789ff') + '<br>';
+  ans += 'SCAN - ' + resultScan[0].toString().fontcolor('#5789ff') + ' ms'.fontcolor('#5789ff') + '<br>';
+  ans += 'CSCAN - ' + resultCscan[0].toString().fontcolor('#5789ff') + ' ms'.fontcolor('#5789ff') + '<br>';
+  ans += 'LOOK - ' + resultLook[0].toString().fontcolor('#5789ff') + ' ms'.fontcolor('#5789ff') + '<br>';
+  ans += 'CLOOK - ' + resultClook[0].toString().fontcolor('#5789ff') + ' ms'.fontcolor('#5789ff') + '<br>';
+  ans += 'LIFO - ' + resultLifo[0].toString().fontcolor('#5789ff') + ' ms'.fontcolor('#5789ff') + '<br>';
 
   ary.push(resultFcfs[1]);
   ary.push(resultSstf[1]);
@@ -1261,9 +1261,9 @@ function comparison_click() {
       fontSize: 16,
       itemclick: function (e) {
         if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
-            e.dataSeries.visible = false;
+          e.dataSeries.visible = false;
         } else {
-            e.dataSeries.visible = true;
+          e.dataSeries.visible = true;
         }
         e.chart.render();
       }
@@ -1329,7 +1329,7 @@ function comparison_click() {
         showInLegend: true,
         dataPoints: bry[6]
       }
-     ]
+    ]
   });
   chart.render();
   document.getElementById("comaprisonAnswers").innerHTML = title + ans + conclusion;
@@ -1417,14 +1417,14 @@ function comparison_click_from_algo() {
   resultClook = clook_man(requestSequenceClook, headComparison);
   resultLifo = lifo_man(requestSequenceLifo, headComparison);
 
-  let title = 'Total Seek Count';
-  ans = 'FCFS - ' + resultFcfs[0] + '\n';
-  ans += 'SSTF - ' + resultSstf[0] + '\n';
-  ans += 'SCAN - ' + resultScan[0] + '\n';
-  ans += 'CSCAN - ' + resultCscan[0] + '\n';
-  ans += 'LOOK - ' + resultLook[0] + '\n';
-  ans += 'CLOOK - ' + resultClook[0] + '\n';
-  ans += 'LIFO - ' + resultLifo[0] + '\n';
+  let title = 'Total Seek Time';
+  ans = 'FCFS - ' + resultFcfs[0] + ' ms'+ '\n';
+  ans += 'SSTF - ' + resultSstf[0] + ' ms' + '\n';
+  ans += 'SCAN - ' + resultScan[0] + ' ms' + '\n';
+  ans += 'CSCAN - ' + resultCscan[0] + ' ms' + '\n';
+  ans += 'LOOK - ' + resultLook[0] + ' ms' + '\n';
+  ans += 'CLOOK - ' + resultClook[0] + ' ms' + '\n';
+  ans += 'LIFO - ' + resultLifo[0] + ' ms' + '\n';
 
   cry.push(["FCFS", resultFcfs[0]]);
   cry.push(["SSTF", resultSstf[0]]);

@@ -162,7 +162,7 @@ function fcfs_click_file(text, answer, name) {
         }
         if(error !== 1) {
             const result = fcfs_file(requestSequenceFcfs, headFcfs);
-            tmpStr += questionNumber + ". Total Seek Count: " + result[0] + "<br><br>   " + "Sequence fullfilment order: ";
+            tmpStr += questionNumber + ". Total Seek Time: " + result[0] + " ms<br><br>   " + "Sequence fullfilment order: ";
             for(h = 0; h < result[1].length; ++h) {
                 if(h%6 === 0 && h !== result[1].length - 1) {
                     tmpStr += "<br>";
@@ -173,7 +173,7 @@ function fcfs_click_file(text, answer, name) {
                 }
                 tmpStr += result[1][h];
             }
-            tmpStr += "<br><br>   " + "Average Seek Count: " + result[0]/(result[1].length-1) + "<br><br><br>";
+            tmpStr += "<br><br>   " + "Average Seek Time: " + (result[0]/(result[1].length-1)).toFixed(2) + " ms<br><br><br>";
         }
         if(questionNumber%2 === 0) {
             answer.push(tmpStr);
@@ -332,7 +332,7 @@ function sstf_click_file(text, answer, name) {
         }
         if(error !== 1) {
             const result = sstf_file(requestSequenceSstf, headSstf);
-            tmpStr += questionNumber + ". Total Seek Count: " + result[0] + "<br><br>   " + "Sequence fullfilment order: ";
+            tmpStr += questionNumber + ". Total Seek Time: " + result[0] + " ms<br><br>   " + "Sequence fullfilment order: ";
             for(h = 0; h < result[1].length; ++h) {
                 if(h%6 === 0 && h !== result[1].length - 1) {
                     tmpStr += "<br>";
@@ -343,7 +343,7 @@ function sstf_click_file(text, answer, name) {
                 }
                 tmpStr += result[1][h];
             }
-            tmpStr += "<br><br>   " + "Average Seek Count: " + result[0]/(result[1].length-1) + "<br><br><br>";
+            tmpStr += "<br><br>   " + "Average Seek Time: " + (result[0]/(result[1].length-1)).toFixed(2) + " ms<br><br><br>";
         }
         if(questionNumber%2 === 0) {
             answer.push(tmpStr);
@@ -511,7 +511,7 @@ function scan_click_file(text, answer, name) {
         }
         if(error !== 1) {
             const result = scan_file(requestSequenceScan, headScan);
-            tmpStr += questionNumber + ". Total Seek Count: " + result[0] + "<br><br>   " + "Sequence fullfilment order: ";
+            tmpStr += questionNumber + ". Total Seek Time: " + result[0] + " ms<br><br>   " + "Sequence fullfilment order: ";
             for(h = 0; h < result[1].length; ++h) {
                 if(h%6 === 0 && h !== result[1].length - 1) {
                     tmpStr += "<br>";
@@ -522,7 +522,7 @@ function scan_click_file(text, answer, name) {
                 }
                 tmpStr += result[1][h];
             }
-            tmpStr += "<br><br>   " + "Average Seek Count: " + result[0]/(result[1].length-1) + "<br><br><br>";
+            tmpStr += "<br><br>   " + "Average Seek Time: " + (result[0]/(result[1].length-1)).toFixed(2) + " ms<br><br><br>";
         }
         if(questionNumber%2 === 0) {
             answer.push(tmpStr);
@@ -699,7 +699,7 @@ function cscan_click_file(text, answer, name) {
         }
         if(error !== 1) {
             const result = cscan_file(requestSequenceCscan, headCscan);
-            tmpStr += questionNumber + ". Total Seek Count: " + result[0] + "<br><br>   " + "Sequence fullfilment order: ";
+            tmpStr += questionNumber + ". Total Seek Time: " + result[0] + " ms<br><br>   " + "Sequence fullfilment order: ";
             for(h = 0; h < result[1].length; ++h) {
                 if(h%6 === 0 && h !== result[1].length - 1) {
                     tmpStr += "<br>";
@@ -710,7 +710,7 @@ function cscan_click_file(text, answer, name) {
                 }
                 tmpStr += result[1][h];
             }
-            tmpStr += "<br><br>   " + "Average Seek Count: " + result[0]/(result[1].length-1) + "<br><br><br>";
+            tmpStr += "<br><br>   " + "Average Seek Time: " + (result[0]/(result[1].length-1)).toFixed(2) + " ms<br><br><br>";
         }
         if(questionNumber%2 === 0) {
             answer.push(tmpStr);
@@ -876,7 +876,7 @@ function look_click_file(text, answer, name) {
         }
         if(error !== 1) {
             const result = look_file(requestSequenceLook, headLook);
-            tmpStr += questionNumber + ". Total Seek Count: " + result[0] + "<br><br>   " + "Sequence fullfilment order: ";
+            tmpStr += questionNumber + ". Total Seek Time: " + result[0] + " ms<br><br>   " + "Sequence fullfilment order: ";
             for(h = 0; h < result[1].length; ++h) {
                 if(h%6 === 0 && h !== result[1].length - 1) {
                     tmpStr += "<br>";
@@ -887,7 +887,7 @@ function look_click_file(text, answer, name) {
                 }
                 tmpStr += result[1][h];
             }
-            tmpStr += "<br><br>   " + "Average Seek Count: " + result[0]/(result[1].length-1) + "<br><br><br>";
+            tmpStr += "<br><br>   " + "Average Seek Time: " + (result[0]/(result[1].length-1)).toFixed(2) + " ms<br><br><br>";
         }
         if(questionNumber%2 === 0) {
             answer.push(tmpStr);
@@ -1057,7 +1057,7 @@ function clook_click_file(text, answer, name) {
         }
         if(error !== 1) {
             const result = clook_file(requestSequenceClook, headClook);
-            tmpStr += questionNumber + ". Total Seek Count: " + result[0] + "<br><br>   " + "Sequence fullfilment order: ";
+            tmpStr += questionNumber + ". Total Seek Time: " + result[0] + " ms<br><br>   " + "Sequence fullfilment order: ";
             for(h = 0; h < result[1].length; ++h) {
                 if(h%6 === 0 && h !== result[1].length - 1) {
                     tmpStr += "<br>";
@@ -1068,7 +1068,7 @@ function clook_click_file(text, answer, name) {
                 }
                 tmpStr += result[1][h];
             }
-            tmpStr += "<br><br>   " + "Average Seek Count: " + result[0]/(result[1].length-1) + "<br><br><br>";
+            tmpStr += "<br><br>   " + "Average Seek Time: " + (result[0]/(result[1].length-1)).toFixed(2) + " ms<br><br><br>";
         }
         if(questionNumber%2 === 0) {
             answer.push(tmpStr);
@@ -1096,26 +1096,26 @@ function fileClook() {
     for(let i = 0;i < fileSelector.files.length;i++){
         readers.push(readFileAsText(fileSelector.files[i]));
     }
-	let answer = [];
+    let answer = [];
     Promise.all(readers).then((values) => {
         for(let i = 0; i < values.length; ++i) {
             answer = clook_click_file(values[i], answer, fileSelector.files[i].name);
         }
     }).then(function () {
-		let numberOfSlides = answer.length;
-		slides = '';
-		for(slideNumber = 1; slideNumber <= numberOfSlides; ++slideNumber) {
-		    slides += '<div class="swiper-slide" style="width: auto; height: auto">' + answer[slideNumber - 1] + '</div>';
-		}
-		document.querySelector("#swiperWrapper").innerHTML = slides;
-	}).then(function () {
+        let numberOfSlides = answer.length;
+        slides = '';
+        for(slideNumber = 1; slideNumber <= numberOfSlides; ++slideNumber) {
+            slides += '<div class="swiper-slide" style="width: auto; height: auto">' + answer[slideNumber - 1] + '</div>';
+        }
+        document.querySelector("#swiperWrapper").innerHTML = slides;
+    }).then(function () {
         let swiper = new Swiper('.swiper-container', {
-			navigation: {
-			  nextEl: '.swiper-button-next',
-			  prevEl: '.swiper-button-prev',
-			}
-		});
-	});
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            }
+        });
+    });
 }
 
 //LIFO ALGORITHM
@@ -1214,7 +1214,7 @@ function lifo_click_file(text, answer, name) {
         }
         if(error !== 1) {
             const result = lifo_file(requestSequenceLifo, headLifo);
-            tmpStr += questionNumber + ". Total Seek Count: " + result[0] + "<br><br>   " + "Sequence fullfilment order: ";
+            tmpStr += questionNumber + ". Total Seek Time: " + result[0] + " ms<br><br>   " + "Sequence fullfilment order: ";
             for(h = 0; h < result[1].length; ++h) {
                 if(h%6 === 0 && h !== result[1].length - 1) {
                     tmpStr += "<br>";
@@ -1225,7 +1225,7 @@ function lifo_click_file(text, answer, name) {
                 }
                 tmpStr += result[1][h];
             }
-            tmpStr += "<br><br>   " + "Average Seek Count: " + result[0]/(result[1].length-1) + "<br><br><br>";
+            tmpStr += "<br><br>   " + "Average Seek Time: " + (result[0]/(result[1].length-1)).toFixed(2) + " ms<br><br><br>";
         }
         if(questionNumber%2 === 0) {
             answer.push(tmpStr);

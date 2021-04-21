@@ -169,8 +169,8 @@
   padding: 20px;
   border: 1px solid #888;
   height: auto;
-  width: 700px;
-  /* //align-items: center; */
+  width: 800px;
+//align-items: center;
   display: flow-root;
 }
 
@@ -192,7 +192,7 @@
 #answers {
   position: relative;
   top: 100px;
-  left: 30px;
+  left: 65px;
   color: black;
   float: left;
   font-size: large;
