@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script>
+      !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){var t=Array.prototype.slice.call(arguments);t.unshift(e);analytics.push(t);return analytics}};for(var e=0;e<analytics.methods.length;e++){var key=analytics.methods[e];analytics[key]=analytics.factory(key)}analytics.load=function(key,e){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._loadOptions=e};analytics._writeKey="MyYAtajRcK8v0Yp3pM2f0CMgTYMSAmyV";analytics.SNIPPET_VERSION="4.13.2";
+      analytics.load("MyYAtajRcK8v0Yp3pM2f0CMgTYMSAmyV");
+      analytics.page();
+      }}();
+    </script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -59,7 +65,7 @@
                 FCFS, the requests are addressed in the order they arrive in the
                 disk queue.
               </p>
-              <a href="disk_scheduling_fcfs.html">Explore</a>
+              <a href="disk_scheduling_fcfs.html" onclick="fcfs()">Explore</a>
             </div>
           </div>
         </div>
@@ -77,7 +83,7 @@
                 In SSTF (Shortest Seek Time First), requests having shortest
                 seek time are executed first.
               </p>
-              <a href="disk_scheduling_sstf.html">Explore</a>
+              <a href="disk_scheduling_sstf.html" onclick="sstf()">Explore</a>
             </div>
           </div>
         </div>
@@ -95,7 +101,7 @@
                 In SCAN algorithm the disk arm moves into a particular direction
                 and services the requests coming in its path.
               </p>
-              <a href="disk_scheduling_scan.html">Explore</a>
+              <a href="disk_scheduling_scan.html" onclick="scan()">Explore</a>
             </div>
           </div>
         </div>
@@ -114,7 +120,7 @@
                 also similar to SCAN algorithm and hence it is known as C-SCAN
                 (Circular SCAN).
               </p>
-              <a href="disk_scheduling_cscan.html">Explore</a>
+              <a href="disk_scheduling_cscan.html" onclick="cscan()">Explore</a>
             </div>
           </div>
         </div>
@@ -148,7 +154,7 @@
                 only to the last request to be serviced in front of the head and
                 then reverses its direction from there only.
               </p>
-              <a href="disk_scheduling_look.html">Explore</a>
+              <a href="disk_scheduling_look.html" onclick="look()">Explore</a>
             </div>
           </div>
         </div>
@@ -167,7 +173,7 @@
                 the last request to be serviced in front of the head and then
                 from there goes to the other end’s last request.
               </p>
-              <a href="disk_scheduling_clook.html">Explore</a>
+              <a href="disk_scheduling_clook.html" onclick="clook()">Explore</a>
             </div>
           </div>
         </div>
@@ -186,7 +192,7 @@
                 where the last element is processed first and the first element
                 is processed last.
               </p>
-              <a href="disk_scheduling_lifo.html">Explore</a>
+              <a href="disk_scheduling_lifo.html" onclick="lifo()">Explore</a>
             </div>
           </div>
         </div>
@@ -267,6 +273,34 @@
             disableOnInteraction: false,
           },
         });
+
+        function fcfs() {
+          analytics.track("FCFS clicked")
+        }
+
+        function sstf() {
+          analytics.track("SSTF clicked")
+        }
+
+        function scan() {
+          analytics.track("SCAN clicked")
+        }
+
+        function cscan() {
+          analytics.track("CSCAN clciked")
+        }
+
+        function look() {
+          analytics.track("LOOK clicked")
+        }
+
+        function clook() {
+          analytics.track("CLOOK clicked")
+        }
+
+        function lifo() {
+          analytics.track("LIFO clicked")
+        }
       </script>
     </div>
   </body>
